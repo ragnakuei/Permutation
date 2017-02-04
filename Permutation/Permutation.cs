@@ -25,12 +25,12 @@ namespace Permutation
             _indexPermutation.Reverse();
 
             List<string> tmpResult = new List<string>();
-            List<string> sourceData = Clone(source);
+            List<string> cloneSource = Clone(source);
             for (int i = 0; i < this._count; i++)
             {
-                tmpResult.Add(sourceData[cloneIndex[0]]);
+                tmpResult.Add(cloneSource[cloneIndex[0]]);
 
-                sourceData.RemoveAt(cloneIndex[0]);
+                cloneSource.RemoveAt(cloneIndex[0]);
                 cloneIndex.RemoveAt(0);
             }
 
